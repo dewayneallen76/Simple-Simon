@@ -1,0 +1,33 @@
+/*Styling for all boxes*/
+.box {
+	width:150px;
+	height:150px;
+	border:1px solid black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding:10px;
+	float: left;
+	}
+/*Styling for individual boxes*/
+#red {
+	background-color: red;
+	margin-right: 5px;
+	opacity: 0.5;
+	}
+
+#blue {
+	background-color: blue;
+	opacity: 0.5;
+	}
+
+#green {
+	background-color: green;
+	clear: left;
+	margin-right: 5px;
+	opacity: 0.5;
+	}
+
+#yellow {
+	background-color: yellow;
+	opacity: 0.5;
+	}
