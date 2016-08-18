@@ -5,20 +5,37 @@ console.log('JS linked');
 // player clicks start to generate random order of colors
 // colors need to fade out in on time out fade out
 // player then needs to click the color generated in order of the random display in order to continue
-// Need to generate random order of colors 
+
 var buttonColors = ["#red", "#green", "#yellow", "#blue"];
 var pattern = [];
 var playerPattern = [];
-
+var elemLength = buttonColors.length;
+// var random = Math.floor(Math.random() * elemLength);
+// var randomColor = buttonColors[random];
 
 // Functions for playing game 
-function startGame() {
-	var elemLength = buttonColors.length;
+function flashSquare() {
 	var random = Math.floor(Math.random() * elemLength);
 	var randomColor = buttonColors[random];
-	$(randomColor).css("opacity", "1");
+	pattern.push(randomColor); // push random color generated to pattern array 
+	console.log(pattern);
+	$(randomColor).animate({
+		opacity: "1"
+	}, 800).animate({
+		opacity: "0.5"
+	}, 200)
 	console.log(randomColor);
 }
+
+
+
+// function gamePattern() {     // plays pattern
+//     for (var i = 0; i < pattern.length; i++) {
+//       flashSquare();
+//       }
+//       console.log(pattern);
+// }
+
 
 
 
@@ -26,8 +43,9 @@ function startGame() {
 
 // event listeners for clicks 
 $('#start').click(function() { 
-	alert('Ready to Play?');
-	startGame();
+	// alert('Ready to Play?');
+	flashSquare();
+	// gamePattern();
 });
 
 $('#red').click(function() {
