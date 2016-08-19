@@ -12,12 +12,16 @@ var sequence = ["#red", "#blue", "#green", "#yellow"];
 var copy = [];
 var elemLength = sequence.length;
   
-
+function randomSequence () {
+	var random = Math.floor(Math.random() * elemLength);
+	var randomColor = sequence[random];
+};
 
 // Functions for playing game 
 function startSequence() {
 	var random = Math.floor(Math.random() * elemLength);
 	var randomColor = sequence[random];
+	randomSequence()
 	copy.push(randomColor); // push random color generated copy array 
 	$(randomColor).animate({
 		opacity: "1"
@@ -27,19 +31,22 @@ function startSequence() {
 	console.log(randomColor);
 	console.log(copy);
 }
-
+// comparing the clicked button to the random color generated, and am getting the no match alert.
+// need to come up with a different approach to this exercise. 
 $('.box').click(function() {   // add click to buttons
 	// var item = copy.unshift();
+	var random = Math.floor(Math.random() * elemLength);
+	var randomColor = sequence[random];
 	var clickId = "#" + this.id;
-	// console.log(clickId);
-	var buttonId = this.id;
-	console.log(buttonId);  // logging button ID to console log to verify
-	if(copy == sequence) {
-		sequence.push(item);
-		if(elemLength <= 0) {
-			round++;
+	var buttonId = "#" + this.id;
+ 	console.log(clickId);
+	// console.log(buttonId);  // logging button ID to console log to verify
+	if(clickId === buttonId) {
+		    alert('Match');
+		if(elemLength <= 3) {
+			// alert('Match');
 		} else {
-			alert('No Match')
+			alert('No Match');
 		}
 	}
 });
