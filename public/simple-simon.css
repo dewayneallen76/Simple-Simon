@@ -14,25 +14,25 @@ body {
 	float: left;
 	}
 /*Styling for individual boxes*/
-.red {
+#red {
 	background-color: red;
 	margin-right: 5px;
 	opacity: 0.5;
 	}
 
-.blue {
+#blue {
 	background-color: blue;
 	opacity: 0.5;
 	}
 
-.green {
+#green {
 	background-color: limegreen;
 	clear: left;
 	margin-right: 5px;
 	opacity: 0.5;
 	}
 
-.yellow {
+#yellow {
 	background-color: yellow;
 	opacity: 0.5;
 	}
