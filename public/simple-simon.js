@@ -1,6 +1,8 @@
 // (function(){
 "use strict";
 console.log('JS linked');
+
+
 // Object of the game
 // player clicks start to generate random order of colors
 // colors need to fade out in on time out fade out
@@ -27,10 +29,22 @@ function startSequence() {
 }
 
 $('.box').click(function() {   // add click to buttons
-	// var item = copy.shift();
-	var buttonId = $(this).attr('id');
-	console.log(buttonId); // logging button ID to console log to verify
+	// var item = copy.unshift();
+	var clickId = "#" + this.id;
+	// console.log(clickId);
+	var buttonId = this.id;
+	console.log(buttonId);  // logging button ID to console log to verify
+	if(copy == sequence) {
+		sequence.push(item);
+		if(elemLength <= 0) {
+			round++;
+		} else {
+			alert('No Match')
+		}
+	}
 });
+
+
 
 // Function for new round (still working on)
 // function newRound() { 
