@@ -1,8 +1,11 @@
-
+/*Background color*/
 body {
-	background-color: gray;
+	background-color: black ;
 	}
-
+/*Styling for container to center*/
+.container {
+	width: 336px;
+}
 /*Styling for all boxes*/
 .box {
 	width:150px;
@@ -12,6 +15,7 @@ body {
 	margin-bottom: 5px;
 	padding:10px;
 	float: left;
+	align-content: center;
 	}
 /*Styling for individual boxes*/
 #red {
