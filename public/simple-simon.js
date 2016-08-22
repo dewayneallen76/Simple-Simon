@@ -1,4 +1,4 @@
-// (function(){
+(function(){
 "use strict";
 console.log('JS linked');
 
@@ -11,11 +11,10 @@ console.log('JS linked');
 var sequence = ["#red", "#blue", "#green", "#yellow"];
 var playerClicks = [];
 var clickIndex = 0;
-var elemLength = sequence.length;
 var round = 0; 
   
 function randomSequence () {
-	var random = Math.floor(Math.random() * elemLength);
+	var random = Math.floor(Math.random() * sequence.length);
 	return sequence[random];
 };
 
@@ -23,7 +22,8 @@ function randomSequence () {
 function startSequence() {
 	clickIndex = 0;
 	var randomColor = randomSequence();
-	playerClicks.push(randomColor); // push random color generated to playerClicks array 
+// push random color generated to playerClicks array 
+	playerClicks.push(randomColor); 
 	$(randomColor).animate({
 		opacity: "1"
 	}, 800).animate({
@@ -47,8 +47,8 @@ $('.box').click(function() {   // add click to buttons
 		}
 	} else {
 // when matches are not made alert 
-		alert('Game Over! Click Start for New Game');
-
+		location.reload();
+		alert('Game Over!');
 	}
 });
 
@@ -61,7 +61,7 @@ $('#start').click(function() {
 $('#red').click(function() {
 	$('#red').animate({
 		opacity: "1"
-	}, 200).animate({
+	},200).animate({
 		opacity: "0.5"
 	},800)
 });
@@ -69,7 +69,7 @@ $('#red').click(function() {
 $('#blue').click(function() {
 	$('#blue').animate({
 		opacity: "1"
-	}, 200).animate({
+	},200).animate({
 		opacity: "0.5"
 	},800)
 });
@@ -77,7 +77,7 @@ $('#blue').click(function() {
 $('#green').click(function() {
 	$('#green').animate({
 		opacity: "1"
-	}, 200).animate({
+	},200).animate({
 		opacity: "0.5"
 	},800)
 });
@@ -85,9 +85,9 @@ $('#green').click(function() {
 $('#yellow').click(function() {
 	$('#yellow').animate({
 		opacity: "1"
-	}, 200).animate({
+	},200).animate({
 		opacity: "0.5"
 	},800)
 });
 
-// })();			
+})();			
