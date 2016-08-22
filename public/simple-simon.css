@@ -1,3 +1,7 @@
+/*Added font from Google Fonts for text and button text*/
+.text-center {
+	font-family: 'Monoton', cursive;
+}
 /*Background color*/
 body {
 	background-color: black ;
@@ -5,6 +9,11 @@ body {
 /*Styling for container to center*/
 .container {
 	width: 336px;
+}
+/*Button*/
+.button {
+	text-align: center;
+	font-family: 'Monoton', cursive;
 }
 /*Styling for all boxes*/
 .box {
