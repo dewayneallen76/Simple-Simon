@@ -1,4 +1,4 @@
-// (function(){
+(function(){
 "use strict";
 console.log('JS linked');
 
@@ -17,14 +17,14 @@ function randomSequence () {
 	var random = Math.floor(Math.random() * sequence.length);
 	return sequence[random];
 };
-
-function playbackUsedSequence () {
-	$(usedSequence).animate({
-		opacity: "1"
-	}, 800).animate({
-		opacity: "0.5"
-	}, 200)
-};
+// Worked on function to flash the used sequence, but could not get it to work. 
+// function flashUsedSequence () {
+// 	$(usedSequence).animate(function() {
+// 		opacity: "1"
+// 	}, 800).animate({
+// 		opacity: "0.5"
+// 	}, 200)
+// };
 
 // Functions for playing game 
 function startSequence() {
@@ -60,6 +60,7 @@ $('.box').click(function() {   // add click to buttons
 // event listeners for clicks 
 $('#start').click(function() { 
 	usedSequence = [];
+	round = 0;
 	startSequence();
 });
 
@@ -95,4 +96,4 @@ $('#yellow').click(function() {
 	},800)
 });
 
-// })();			
+})();			
