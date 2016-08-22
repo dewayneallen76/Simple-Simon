@@ -1,4 +1,4 @@
-(function(){
+// (function(){
 "use strict";
 console.log('JS linked');
 
@@ -16,6 +16,14 @@ var round = 0;
 function randomSequence () {
 	var random = Math.floor(Math.random() * sequence.length);
 	return sequence[random];
+};
+
+function playbackUsedSequence () {
+	$(usedSequence).animate({
+		opacity: "1"
+	}, 800).animate({
+		opacity: "0.5"
+	}, 200)
 };
 
 // Functions for playing game 
@@ -42,7 +50,7 @@ $('.box').click(function() {   // add click to buttons
 			setTimeout(function() {
 				startSequence(); 
 			}, 1000);
-		}
+		} 
 	} else {
 		location.reload();   // when matches are not made alert and reload page to start new game
 		alert('Game Over!');
@@ -87,4 +95,4 @@ $('#yellow').click(function() {
 	},800)
 });
 
-})();			
+// })();			
