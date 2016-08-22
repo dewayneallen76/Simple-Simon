@@ -43,7 +43,9 @@ $('.box').click(function() {   // add click to buttons
 // if the player click matches the random generated number the Round will increase. 
 			round++; 								
 			$('#round').html('Round: ' + round);
-			startSequence();
+			setTimeout(function() {
+				startSequence(); 
+			}, 1000);
 		}
 	} else {
 // when matches are not made alert 
